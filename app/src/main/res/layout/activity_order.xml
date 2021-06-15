@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="15dp"
+    android:background="#E4E4E4"
+    tools:context=".OrderActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="270dp"
+            android:background="@drawable/alert_finish" />
+        <ImageView
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:scaleType="fitXY"
+            android:id="@+id/imageOrd"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="10dp"
+            android:src="@mipmap/ic_launcher" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/iemOrd"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:layout_toRightOf="@+id/imageOrd"
+            android:layout_toEndOf="@+id/imageOrd"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="70dp"
+            android:layout_marginStart="40dp"
+            android:textColor="@color/black"
+            android:text="Nama Menu" />
+
+        <RelativeLayout
+            android:id="@+id/RLDesc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/jmlord"
+            android:layout_marginTop="20dp"
+            android:background="@color/white">
+
+            <TextView
+                android:id="@+id/descOrd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:text="Deskripsi Menu"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/imageOrd"
+            android:layout_toEndOf="@+id/imageOrd"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_below="@id/iemOrd"
+            android:layout_marginStart="15dp"
+            android:textColor="@color/black"
+            android:text="Rp "
+            android:textSize="20dp"/>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/hargaOrd"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_toRightOf="@+id/imageOrd"
+            android:layout_toEndOf="@+id/imageOrd"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_below="@id/iemOrd"
+            android:layout_marginStart="50dp"
+            android:textColor="@color/black"
+            android:text="Harga Order" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/ordertxt"
+            android:textSize="15sp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_below="@id/imageOrd"
+            android:layout_marginStart="10dp"
+            android:textColor="@color/black"
+            android:text="Jumlah" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/descreaseOrd"
+            android:textSize="30dp"
+            android:gravity="center"
+            android:layout_below="@+id/ordertxt"
+            android:layout_marginTop="15dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/dg_button"
+            android:textColor="@color/black"
+            android:text="-" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/jmlord"
+            android:textSize="30sp"
+            android:layout_toRightOf="@+id/descreaseOrd"
+            android:layout_toEndOf="@+id/descreaseOrd"
+            android:layout_below="@id/ordertxt"
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginStart="30dp"
+            android:textColor="@color/black"
+            android:text="0" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/increaseOrd"
+            android:textSize="30dp"
+            android:gravity="center"
+            android:layout_toEndOf="@id/jmlord"
+            android:layout_below="@+id/ordertxt"
+            android:layout_marginTop="15dp"
+            android:layout_marginStart="50dp"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/dg_button"
+            android:textColor="@color/black"
+            android:text="+"
+            android:layout_toRightOf="@id/jmlord" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/toHardOrd"
+            android:textSize="30sp"
+            android:layout_toRightOf="@+id/increaseOrd"
+            android:layout_toEndOf="@id/increaseOrd"
+            android:layout_below="@id/ordertxt"
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginStart="30dp"
+            android:textColor="@color/black"
+            android:text="0" />
+
+        <Button
+            android:id="@+id/orderLagi"
+            android:layout_width="135dp"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="Back"
+            android:textColor="@color/white"
+            android:textSize="15sp"
+            android:layout_below="@+id/RLDesc"
+            android:layout_marginTop="20dp"/>
+
+    </RelativeLayout>
+
+</ScrollView>
